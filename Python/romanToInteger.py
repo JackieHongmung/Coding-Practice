@@ -1,4 +1,15 @@
 def romanToInt(s):
+    """function converts a given roman numeral as a string into a integer
+    by converting each character in the string to its integer counterpart and either
+    subtracting or adding to the total depending on if the previous value is greater
+    or lower
+
+    Args:
+        s (string): input string of roman numerals that is already valid
+
+    Returns:
+        integer: converted version of the roman numeral
+    """
     romanDict = {"I": 1,
         "V": 5,
         "X": 10,
