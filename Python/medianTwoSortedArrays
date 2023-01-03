@@ -59,5 +59,23 @@ def findMedianSortedArrays(list1,list2):
                 runningTotal = runningTotal/2
                 return runningTotal
 
+
+def findMedianLogN(list1,list2):
+    size1 = len(list1)
+    size2 = len(list2)
+    totalSize = size1+size2
+    # to find the median, we find the middle point of both lists and adjust until we know that exactly half the numbers are above one of the pointers
+    pointer1 = math.floor(size1/2)
+    pointer2 = math.floor(size1/2)
+    aboveP1 = 0
+    aboveP2 = 0
+    medianFound = False
+    medianPosition = totalSize / 2 # for now let total size be odd
+    while medianFound is False:
+        aboveP1 = size1 - pointer1
+        aboveP2 = size2 - pointer2
+        
+
 if __name__ == "__main__":
-    print(findMedianSortedArrays([1,3,5,6,7,8,9],[2,3,4]))
+    print(findMedianLogN([1,2,3,4,5,6],[2,4,6,8,9])) # middle should be 3
+    #print(findMedianSortedArrays([1,3,5,6,7,8,9],[2,3,4]))
