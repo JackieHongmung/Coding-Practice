@@ -17,8 +17,8 @@ def romanToInt(s):
         "C":100,
         "D":500,
         "M":1000}
-    value = 0
-    prevNum = 0
+    value = 0 # keeps track of total value
+    prevNum = 0 # keeps track of previous value to determine if subtracting or adding
     for i in range(0,len(s)):
         curRom = s[i]
         curNum = romanDict.get(curRom)
