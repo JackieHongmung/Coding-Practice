@@ -63,6 +63,10 @@ def findMedianSortedArrays(list1,list2):
 def findMedianLogN(list1,list2):
     size1 = len(list1)
     size2 = len(list2)
+    if size1 >= size2:
+        largerList = 1
+    else:
+        largerList = 2
     totalSize = size1+size2
     totalEven = False
     if totalSize % 2 == 0: # if the total number is even, remove largest from the total, this makes calculations easier later
